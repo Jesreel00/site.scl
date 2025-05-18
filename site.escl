@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Viagem 2</title>
+<style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7f9;
+    color: #7e7878;
+  }
+  header {
+    background-color: #b771c5;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    cursor: default;
+  }
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #1eb8f5;
+  }
+  .banner {
+    background: url("https://4.bp.blogspot.com/-wpGcMwMGFHQ/V6ZtydFbufI/AAAAAAAADHk/4hELqSh4eYIUb1tqvi_VUN4f782BUSVgwCLcB/s1920/amazing_landscape-wallpaper-1920x1080.jpg") center center/cover  no-repeat;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+    color: #b771c5;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #b771c5;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+  .destinos, .pacotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 1.8rem;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1rem 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #222;
+  }
+  .card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .card-content button {
+    align-self: flex-start;
+    background-color: #b771c5;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .card-content button:hover {
+    background-color: #1b34a3;
+  }
+  .depoimentos {
+    background: #e9f1fd;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  .depoimento-item {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+    padding-left: 1.8rem;
+    color: #444;
+  }
+  .depoimento-item::before {
+    content: "“";
+    font-size: 2.5rem;
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+  }
+  footer a {
+    color: #ffc107;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.4rem;
+    }
+    nav {
+      gap: 1rem;
+    }
+    .banner {
+      font-size: 1.7rem;
+      height: 300px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Explore Viagens</h1>
+  <nav>
+    <a href="#destinos">Destinos</a>
+    <a href="#pacotes">Pacotes</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header> 
+
+<div class="banner">
+  Escolha seu Proximo Destino!
+</div>
+
+<main>
+  <section id="destinos">
+    <h2>Destinos Populares</h2>
+    <div class="destinos">
+      <div class="card">
+        <img src="https://s1.1zoom.me/b5050/242/Switzerland_Mountains_451944_3840x2400.jpg" alt="arvores" />
+        <div class="card-content">
+          <h3>Chalé Na Montanha</h3>
+          <p>Coloca Descrição Depois</p>
+          <button onclick="alert('Mais informações sobre Praia Tropical')">Saiba Mais</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.05e1e92e024c751cb52f115fba4e3e4e?rik=e8dQkr4qRIIPIg&pid=ImgRaw&r=0" alt="Metrópole Moderna" />
+        <div class="card-content">
+          <h3>Casa No Lago</h3>
+          <p>Coloca Descrição Depois </p>
+          <button onclick="alert('Mais informações sobre Metrópole Moderna')">Saiba Mais</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://d1l3zvrqp603kj.cloudfront.net/33_458c6de7fd.jpg" alt="Montanhas e Natureza" />
+        <div class="card-content">
+          <h3>Praia</h3>
+          <p>Coloca Descrição Depois .</p>
+          <button onclick="alert('Mais informações sobre Montanhas e Natureza')">Saiba Mais</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pacotes">
+    <h2>Pacotes de Viagem</h2>
+    <div class="pacotes">
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.X9a7sjzz3m9kguY5lT-sHAHaE7?r=0&cb=iwc2&rs=1&pid=ImgDetMain" alt="Pacote Aventura" />
+        <div class="card-content">
+          <h3>Pacote Aventura</h3>
+          <p>Coloca Descrição Depois.</p>
+          <button onclick="alert('Escolheu o Pacote Aventura!')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.7528c7d06fb0e40ed011808f91ee1f55?rik=Vrqtnau4HhHjdA&pid=ImgRaw&r=0" alt="Pacote Cultural" />
+        <div class="card-content">
+          <h3>Pacote Cultural</h3>
+          <p>Coloca Descrição Depois.</p>
+          <button onclick="alert('Escolheu o Pacote Cultural!')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.47b947c7bf3b14bdbcae08cc90dce746?rik=zAOuzJxoq8oclA&pid=ImgRaw&r=0" alt="Pacote Relax" />
+        <div class="card-content">
+          <h3>Pacote Relax</h3>
+          <p>Coloca Descrição Depois.</p>
+          <button onclick="alert('Escolheu o Pacote Relax!')">Reservar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos">
+      <p class="depoimento-item">“A viagem dos meus sonhos se tornou real graças à Explore Viagens! Atendimento impecável e destinos incríveis.” - Ana P.</p>
+      <p class="depoimento-item">“Pacotes bem elaborados, guias simpáticos e muita diversão. Recomendo para todos que querem explorar o mundo.” - Lucas M.</p>
+      <p class="depoimento-item">“Cada detalhe foi cuidado com carinho. Voltarei a viajar com eles com certeza!” - Mariana S.</p>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form onsubmit="handleForm(event)" style="max-width: 400px;">
+      <label for="nome">Nome</label><br/>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:6px;border:1px solid #ccc;"/>
+
+      <label for="email">Email</label><br/>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:6px;border:1px solid #ccc;"/>
+
+      <label for="mensagem">Mensagem</label><br/>
+      <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." rows="4" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:6px;border:1px solid #ccc;"></textarea>
+
+      <button type="submit" style="background-color:#007bff;color:white;padding:0.7rem 1.2rem;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:background-color 0.3s ease;">Enviar</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 jes Viagens. direitos reservados.
+  <br />
+  Siga-nos:
+  <a href="#" aria-label="Facebook">Facebook</a> |
+  <a href="#" aria-label="Instagram">Instagram</a> |
+  <a href="#" aria-label="Twitter">Twitter</a>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      if (nome && email && mensagem) {
+        alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`);
+        e.target.reset();
+      } else {
+        alert('Por favor, preencha todos os campos corretamente.');
+      }
+    });
+  </script>
+</body>
+</html>
